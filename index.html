@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="closeWin()">close</button>
+    <button id="button" onclick="openWin()">openWin</button>
+    <script>
+       var date = new Date();
+        var n = date.toDateString();
+       var time = date.toLocaleTimeString();
+        console.log('date:', n);
+        console.log('time:',time);
+//////////////////////////////////////////////////////////////////////////////////////
+// var newWin = window.open("https://www.google.com/https://iti.gov.eg/home", "_blank", "width=400, height=400, screenX=300, screenY=300")
+
+
+var newWin;
+function openWin() {
+   newWin = window.open("https://iti.gov.eg/home", "_blank", "width=400, height=400, screenX=300, screenY=300")
+}
+function closeWin(params) {
+     newWin.close()
+ }
+ ////////////////////////////////////////////////////////////////////////////////////
+
+ function validNum(num) {
+    var reg=  "^\d*[1357]$";
+    var result=num.match(reg)
+ if(result){
+    console.log(true)
+ }
+else{
+    var num=  prompt("enter num");
+    validNum(num);
+}
+ }
+
+ var num=  prompt("enter num");
+ validNum(num);
+    </script>
+</body>
+</html>
